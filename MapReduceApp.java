@@ -33,6 +33,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.Job;
 import org.commoncrawl.warc.WARCFileInputFormat;
 
+//FIX: When you do map.put(domain) you are using the entire list of domains as the key, not just the single domain you're looking at at that moment.
+
 public class MapReduceApp {
     private static final Logger LOG = Logger.getLogger(MapReduceApp.class);
     protected static enum MAPPERCOUNTER {
